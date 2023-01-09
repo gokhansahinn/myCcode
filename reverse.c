@@ -74,6 +74,9 @@ int main()
 
     reverseIt(array1,4);
     printArray(array1,4);
+	
+	reverseIntArray(array,6);
+	printForInt(array,6);
 
     return 0;
 }   
