@@ -70,11 +70,11 @@ void printArray(char *arr,int size)
 int main()
 {
     int array[]={6,5,10,7,4,1};
-    char array1[]={'a','k','l','s'}
+    char array1[]={'a','k','l','s'};
 
     reverseIt(array1,4);
     printArray(array1,4);
-	
+	printf("this for int array\n");
 	reverseIntArray(array,6);
 	printForInt(array,6);
 

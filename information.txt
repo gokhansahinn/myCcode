@@ -2,3 +2,4 @@
 This code is for writing for C lesson on Udemy. 
 I got this github issue :-)
 merhabalar
+up to 49. Lesson is done
