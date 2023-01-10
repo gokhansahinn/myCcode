@@ -1,3 +1,4 @@
 ####
 This code is for writing for C lesson on Udemy. 
-I got this github issue :-
+I got this github issue :-)
+merhabalar
