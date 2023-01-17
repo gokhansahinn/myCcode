@@ -21,20 +21,24 @@
 void printArrayLefttoRight(int *array,int size)
 {
     if(size>0)
+    {
         printf("%d  ",array[0]);
         printArrayLefttoRight(array+1,size-1);
+    }
 }
 void printArrayRighttoLeft(int *array,int size)
 {
     if(size>0)
+    {
         printf("%d  ",array[size-1]);
-        printArrayRighttoLeft(array+size-1,size-1);
+        printArrayRighttoLeft(array,size-1);
+    }
 }
 int main()
 {
     int array[]={1,3,2,4};
     int size=sizeof(array)/sizeof(array[0]);
-    printArrayLefttoRight(array,size);
+    //printArrayLefttoRight(array,size);
     printArrayRighttoLeft(array,size);
 
     return 0;
