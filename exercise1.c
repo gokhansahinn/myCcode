@@ -49,6 +49,7 @@ int main()
     printArray(array,sizeof(array)/sizeof(int));
     printf("Array is NOTDuplicated\n\n");
     printArray(noDuplicateArray,7);
+    free(noDuplicateArray);
 
     return 0;
 }
