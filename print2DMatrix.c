@@ -6,30 +6,18 @@
 //Create Matrix
 //Assign Values
 //Print Matrix
-void createMatrix(int **newArray, int* rows,int* columnsArray)
+void createMatrix(int **newArray, int rows,int* columnsArray)
 {
-    for(int i=0; i<*rows ; i++)
+    for(int i=0; i<rows ; i++)
     {
         printf("Enter a column number for %d. rows: ",i+1);
         scanf("%d",&columnsArray[i]);
-        newArray[i]= (int *)malloc(columnsArray[i]*sizeof(int));
-        for(int j=0; j<columnsArray[i] ; j++)
-        {
-            printf("newarray[%d][%d] = %d\n",i,j,newArray[i][j]);  
-        }
+        newArray[i]= (int *)calloc(columnsArray[i],sizeof(int));
     }
 }
 void assignValuesMatrix(int **array,int rows, int* columnsArray)
 {
     int value;
-    for(int i = 0; i<rows ; i++)
-    {   
-        for(int j=0; j<columnsArray[i] ; j++)
-        {
-            printf("array[%d][%d] = %d\n",i,j,array[i][j]);  
-        }
-        printf("\n");
-    }
     for(int i = 0; i<rows ; i++)
     {
         for(int j=0; j<columnsArray[i] ; j++)
@@ -40,7 +28,6 @@ void assignValuesMatrix(int **array,int rows, int* columnsArray)
         }
 
     }
-
 }
 void printValuesMatrix(int **array,int rows, int* columnsArray)
 {
@@ -56,22 +43,14 @@ void printValuesMatrix(int **array,int rows, int* columnsArray)
 }
 int main()
 {
-    int ** myMatrix;
+    int ** myMatrix = NULL;
     int * columnsArray;
     int rows;
     printf("enter a row number for 2D Matrix: ");
     scanf("%d",&rows);
     columnsArray = (int* )calloc(rows,sizeof(int));
-    myMatrix = (int **)calloc(rows, sizeof(int));
-    createMatrix(myMatrix, &rows,columnsArray);
-    for(int i = 0; i<rows ; i++)
-    {   
-        for(int j=0; j<columnsArray[i] ; j++)
-        {
-            printf("myMatrix[%d][%d] = %d\n",i,j,myMatrix[i][j]);  
-        }
-        printf("\n");
-    }
+    myMatrix = (int **)calloc(rows, sizeof(int *));
+    createMatrix(myMatrix, rows,columnsArray);
     for(int i=0 ; i<rows;i++)
     {
         printf("columnsArray[%d]=%d\n",i,columnsArray[i]);
